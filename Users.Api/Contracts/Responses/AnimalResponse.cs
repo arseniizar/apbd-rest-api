@@ -1,6 +1,6 @@
 ﻿using Users.Api.Models;
 
-namespace Users.Api.Contracts.Responces;
+namespace Users.Api.Contracts.Responses;
 
 public class AnimalResponse
 {

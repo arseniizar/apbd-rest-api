@@ -1,5 +1,5 @@
 ﻿using Users.Api.Contracts.Requests;
-using Users.Api.Contracts.Responces;
+using Users.Api.Contracts.Responses;
 using Users.Api.Data;
 using Users.Api.Models;
 
