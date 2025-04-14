@@ -1,4 +1,5 @@
-﻿using Users.Api.Models;
+﻿using System.Text.Json.Serialization;
+using Users.Api.Models;
 
 namespace Users.Api.Contracts.Responses;
 
@@ -11,6 +12,19 @@ public class AnimalResponse
     public string FurColor { get; set; }
 
     public List<VisitResponse> Visits { get; init; }
+
+    // to solve an error during tests
+    [JsonConstructor]
+    public AnimalResponse(int id, string name, string category, double weight, string furColor,
+        List<VisitResponse> visits)
+    {
+        Id = id;
+        Name = name;
+        Category = category;
+        Weight = weight;
+        FurColor = furColor;
+        Visits = visits;
+    }
 
     public AnimalResponse(Animal animal) =>
         (Id, Name, Category, Weight, FurColor, Visits) =
